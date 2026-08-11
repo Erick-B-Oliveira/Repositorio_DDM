@@ -1,0 +1,14 @@
+import { StyleSheet, Text, View, Image } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={{backgroundColor: 'brown', flex: 1, justifyContent: 'center'}}>
+    <View style={{alignItems: 'center'}}><Image source={{ uri: 'https://limbuscompany.wiki.gg/images/thumb/Gloom3BG.png/112px-Gloom3BG.png?5781f9' }} style={{width: 200, height: 200}}></Image></View>
+    <View style={{alignItems: 'center'}}><Image source={{ uri: 'https://limbuscompany.wiki.gg/images/thumb/Lament%2C_Mourn%2C_and_Despair_Heathcliff_Icon.png/74px-Lament%2C_Mourn%2C_and_Despair_Heathcliff_Icon.png?d8f569' }} style={{width: 130, height: 130, borderRadius: 65}}></Image></View>
+    <View style={{alignItems: 'center'}}> <Text style={{fontSize: 22, fontWeight: 'bold', textAlign: 'center'}}>Lament Mourn and Despair</Text> </View>
+    <View style={{alignItems: 'center'}}><Text>(On Use) Lose 15 sp</Text></View>
+   
+    </View>
+  );
+}
+
