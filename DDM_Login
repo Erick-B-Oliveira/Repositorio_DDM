@@ -19,8 +19,8 @@ export default function App() {
     <View>
      <Text style={{fontWeight: 24, alignSelf: 'center'}}>REALIZE SEU LOGIN NO CATALOGO DE FOSSEIS</Text>
      
-     <TextInput placeholder = "digite seu EMAIL" style={{ borderWidth: 2, borderColor: "black", margin: 10}}/>
-      <TextInput keyboardAppearance='secret' placeholder = "digite sua senha" style={{ borderWidth: 2, borderColor: "black", margin: 9}}/>
+     <TextInput placeholder = "digite seu EMAIL ou sua  NAMETAG" style={{ borderWidth: 2, borderColor: "black", margin: 10}}/>
+      <TextInput secureTextEntry='true' placeholder = "digite sua senha" style={{ borderWidth: 2, borderColor: "black", margin: 9}}/>
       
       <Button title='Login'
       onPress = {( ()=>  (alert('Login Realizado'))  )}
@@ -32,3 +32,4 @@ export default function App() {
     </View>
   );
 }
+
