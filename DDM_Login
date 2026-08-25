@@ -1,0 +1,34 @@
+import { StyleSheet, Text, View, TextInput, Button, Image} from 'react-native';
+
+export default function App() {
+  return (
+    <View style={{backgroundColor: 'gray', flex: 1}} >
+   <View style={{
+     justifyContent: 'center',
+     alignItems: 'center',
+     margin: 10
+   }}>
+    <Image source={{ uri:  'https://static.vecteezy.com/system/resources/thumbnails/008/847/598/small/watercolor-illustration-an-old-open-book-aged-pages-of-a-book-without-text-an-empty-place-to-insert-png.png'}} 
+    style={{
+     width: 100, height: 100
+    }}/>
+
+    <Text> Catalogo de Fosseis </Text>
+    </View>
+ 
+    <View>
+     <Text style={{fontWeight: 24, alignSelf: 'center'}}>REALIZE SEU LOGIN NO CATALOGO DE FOSSEIS</Text>
+     
+     <TextInput placeholder = "digite seu EMAIL" style={{ borderWidth: 2, borderColor: "black", margin: 10}}/>
+      <TextInput keyboardAppearance='secret' placeholder = "digite sua senha" style={{ borderWidth: 2, borderColor: "black", margin: 9}}/>
+      
+      <Button title='Login'
+      onPress = {( ()=>  (alert('Login Realizado'))  )}
+      />
+    </View>
+
+   
+ 
+    </View>
+  );
+}
