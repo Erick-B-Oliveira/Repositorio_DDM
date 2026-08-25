@@ -17,13 +17,13 @@ export default function App() {
     </View>
  
     <View>
-     <Text style={{fontWeight: 24, alignSelf: 'center'}}>REALIZE SEU LOGIN NO CATALOGO DE FOSSEIS</Text>
+     <Text style={{fontWeight: 24, alignSelf: 'center'}}>CRIE SUA CONTA NO CATALOGO DE FOSSEIS</Text>
      
      <TextInput placeholder = "digite seu EMAIL" style={{ borderWidth: 2, borderColor: "black", margin: 10}}/>
 
       <TextInput placeholder = "digite sua Nametag (nome do seu usuario)" style={{ borderWidth: 2, borderColor: "black", margin: 9}}/>
 
-      <TextInput  placeholder = "Crie uma senha" style={{ borderWidth: 2, borderColor: "black", margin: 9}}/>
+      <TextInput secureTextEntry='true' placeholder = "Crie uma senha" style={{ borderWidth: 2, borderColor: "black", margin: 9}}/>
 
       <Button title='Criar Conta'
       onPress = {( ()=>  (alert('Conta Criada'))  )}
@@ -35,5 +35,3 @@ export default function App() {
     </View>
   );
 }
-
- 
