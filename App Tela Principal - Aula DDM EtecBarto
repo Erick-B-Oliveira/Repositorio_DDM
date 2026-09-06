@@ -1,0 +1,369 @@
+import {
+  Text,
+  View,
+  Image,
+  ScrollView,
+  TextInput,
+  Pressable,
+} from 'react-native';
+
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { StatusBar } from 'expo-status-bar';
+
+export default function App() {
+  return (
+    <View style={{ backgroundColor: 'gray', flex: 1 }}>
+      <SafeAreaProvider>
+        <SafeAreaView style={{ backgroundColor: 'white', width: 400,
+            alignSelf: 'center',}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              backgroundColor: 'white',
+              justifyContent: 'space-between'
+            }}>
+            <Text style={{ fontSize: 12 }}> Catalago de Fosseis V1.0 </Text>
+
+            <Image
+              source={{
+                uri: 'https://static.vecteezy.com/system/resources/thumbnails/008/847/598/small/watercolor-illustration-an-old-open-book-aged-pages-of-a-book-without-text-an-empty-place-to-insert-png.png',
+              }}
+              style={{
+                width: 27,
+                height: 27,
+                marginLeft: 11,
+              }}
+            />
+
+            <Text  style={{ fontSize: 12 }}>  Feito por Erick Bride </Text>
+          </View>
+        </SafeAreaView>
+
+        <View
+          style={{
+            flex: 0.1,
+            width: 400,
+            alignSelf: 'center',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <View style={{ flex: 1 }}>
+            <TextInput
+              placeholder="Pesquise por um fossil"
+              style={{
+                borderWidth: 2,
+                borderColor: 'black',
+                margin: 1,
+                backgroundColor: 'lightgray',
+              }}
+            />
+          </View>
+
+          <Pressable onPress={() => alert('Pesquisa')} style={{ flex: 1 }}>
+            {' '}
+            <View
+              style={{
+                flex: 1,
+                borderWidth: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'black',
+              }}>
+              {' '}
+              <Text style={{ fontSize: 18, color: 'white' }}>
+                {' '}
+                Pesquisar
+              </Text>{' '}
+            </View>{' '}
+          </Pressable>
+        </View>
+
+        <View
+          style={{
+            borderLeftWidth: 2,
+            borderRightWidth: 2,
+            borderBottomWidth: 2,
+            borderColor: 'black',
+            flex: 0.166,
+            width: 400,
+            alignSelf: 'center',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            backgroundColor: 'white',
+            marginTop: 2,
+          }}>
+          <StatusBar style="dark" />
+
+          <Pressable
+            onPress={() => alert('Historico de pesquisa/fosseis vizualizadoss')}
+            style={{ flex: 1 }}>
+            <View style={{ flex: 1 }}>
+              <Image
+                source={{
+                  uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZLkG6tv14Lbp-OzXFICpXz59PdwTcue5v6ODuhEKbYg&s=10',
+                }}
+                style={{ flex: 1, marginTop: 3.5 }}
+              />
+            </View>
+          </Pressable>
+
+          <Pressable
+            onPress={() => alert('Pagina Principal')}
+            style={{ flex: 1 }}>
+            <View style={{ flex: 1 }}>
+              <Image
+                source={{
+                  uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8AfSEHBt7AXvMV9jLyRXogSai5LI5gQAwXAKYSePPw&s=10',
+                }}
+                style={{ flex: 1, marginTop: 3.5 }}
+              />
+            </View>
+          </Pressable>
+
+          <Pressable
+            onPress={() => alert('Configuraciones')}
+            style={{ flex: 1 }}>
+            <View style={{ flex: 1 }}>
+              <Image
+                source={{
+                  uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHagdMneooz3IqZCB1tku_pBsGT4qcBLFA9xfRPxl-TA&s',
+                }}
+                style={{ flex: 1, marginTop: 3.5 }}
+              />
+            </View>
+          </Pressable>
+        </View>
+
+        <ScrollView
+          style={{
+            backgroundColor: 'white',
+            flex: 1,
+            width: 400,
+            alignSelf: 'center',
+            marginTop: 11,
+            marginBottom: 48,
+            borderRadius: 20,
+          }}>
+          <View
+            style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Pressable
+              onPress={() =>
+                alert(
+                  'Informações sobre os tiranosauridios MUITO interessantes'
+                )
+              }
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZZ0AEXY0z8rRFJVAKIzu_0abbOzydUHdlwuFwOwTuqg&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}> Tyrannosauridae </Text>
+              </View>
+            </Pressable>
+
+            <Pressable
+              onPress={() =>
+                alert('Informations etc coisas coisas Allosauridios')
+              }
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7i0KploD6_sOiRdNsv7Mj2cW4v1AfsT8Nk5wA-SKQA&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}>Allosauridae </Text>
+              </View>
+            </Pressable>
+          </View>
+
+          <View
+            style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Pressable
+              onPress={() => alert('SER UM Fossil é tipo:')}
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0bLDwP-JKEYZ7vdGhW7di4ZpME0-R8vGruAvlkcH0yQ&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}> Hadrosauridae </Text>
+              </View>
+            </Pressable>
+
+            <Pressable
+              onPress={() => alert('Crocodilos informason')}
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfIwIMTZPd7zdKGxu37P8KsCymZ4RN7oTzYVTKHWsnfw&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}> Crocodylidae </Text>
+              </View>
+            </Pressable>
+          </View>
+
+          <View
+            style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Pressable
+              onPress={() => alert('Dromeossaurus info')}
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStRfq2VypRvzJnfdJJVLyYxHYNnmlV-vbkwXTzbbzP3g&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}>Dromaeosauridae </Text>
+              </View>
+            </Pressable>
+
+            <Pressable
+              onPress={() => alert('SaUrOPedEs vInFo')}
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyE15ca8bTz9huoOnNx-fqO15ARctif86DmUKHOwO2sg&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}>Sauropedes</Text>
+              </View>
+            </Pressable>
+          </View>
+
+          <View
+            style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Pressable
+              onPress={() =>
+                alert(
+                  'Aurelixidios é uma especie ficticia professor, eu os inventei porque eu não fui capaz de identificar o fossil desse png 100% real'
+                )
+              }
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi05cxdBbzr_c-Mddz4Lv_J01cwPeZYLhaoKjOekMYvhyKSO3gq94REawG&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}>Aurelixidios</Text>
+              </View>
+            </Pressable>
+
+            <Pressable
+              onPress={() => alert('Info Estegossauro')}
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbZN-xIIJRrcmnGaHdn6ftr8UMaiVYwQrjJFI_GXmUyg&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}>Estegosauridieos</Text>
+              </View>
+            </Pressable>
+          </View>
+
+          <View
+            style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <Pressable
+              onPress={() => alert('Cefalopodes info')}
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ64pkbSoWwIFcvDlo5ktmC_WFrF7t1dw27R1Xh_lGEg&s=10',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+                <Text style={{ fontSize: 21 }}>Cefalópodes</Text>
+              </View>
+            </Pressable>
+
+            <Pressable
+              onPress={() => alert('homosapiens info')}
+              style={{ flex: 1 }}>
+              <View
+                style={{
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  source={{
+                    uri: 'https://cdn-icons-png.magnific.com/256/17870/17870139.png?semt=ais_white_label',
+                  }}
+                  style={{ height: 170, width: 170 }}
+                />
+
+                <Text style={{ fontSize: 21 }}>Homosapiens</Text>
+              </View>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </SafeAreaProvider>
+    </View>
+  );
+}
