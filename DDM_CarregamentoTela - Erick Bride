@@ -1,25 +1,47 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-
 export default function App() {
   return (
+    <View style={estiloz.fundo}>
+      <View style={estiloz.fundo}>
+        <Image
+          style={estiloz.imagem}
+          source={{
+            uri: 'https://static.vecteezy.com/system/resources/thumbnails/008/847/598/small/watercolor-illustration-an-old-open-book-aged-pages-of-a-book-without-text-an-empty-place-to-insert-png.png',
+          }}
+        />
 
-<View style={{flex: 1, backgroundColor: 'gray'}}>  
+        <Text style={estiloz.texto_titulo}>
+           Catalogo de Fosseis
+        </Text>
 
-<View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-
-<Image style={{width: 100, height: 100 }} source={{ uri: 'https://static.vecteezy.com/system/resources/thumbnails/008/847/598/small/watercolor-illustration-an-old-open-book-aged-pages-of-a-book-without-text-an-empty-place-to-insert-png.png'}}/> 
-
-<Text style={{fontWeight: 'bold', fontSize: 24}}> Catalogo de Fosseis </Text>
-
- <Text> Veja todos os fosseis encontrado pela humanidade! </Text> 
-
-</View>
-
-
-<View style={{alignItems: 'center', flex: 0.07}}> <Text> V2.0 - Erick Bride</Text>
-</View>
-
-</View>  );
-
+        <Text> Veja todos os fosseis encontrado pela humanidade! </Text>{' '}
+      </View>
+      <View style={estiloz.texto_informacao}>
+        {' '}
+        <Text> V2.0 - Erick Bride</Text>{' '}
+      </View>
+    </View>
+  );
 }
+
+const estiloz = StyleSheet.create({
+  fundo: {
+    flex: 1,
+    backgroundColor: 'gray',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  texto_titulo: {
+     fontWeight: 'bold',
+     fontSize: 24
+  },
+  texto_informacao:{
+     alignItems: 'center',
+     flex: 0.07 
+  },
+  imagem:{ 
+    width: 100,
+    height: 100 
+  }
+});
