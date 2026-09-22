@@ -1,0 +1,62 @@
+import{StyleSheet,Text,View,Image}from'react-native';
+/*removi as const não necessarias para o script (TODAS ELAS)*/
+export default function App(){
+  /*não acredite, de fato, pre de usa-las, obs: aquelas consts eram inuteis*/
+
+return(
+
+<View style={caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito.aCaixaPaiDeTodosOsElementosDaMinhaTelaIncrivilhosa}>
+
+<Text style={caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito.titulo_supimpa_que_o_chatbot_garantiu_que_existe}>App de Estudos</Text>
+
+<Image source={require('./book-svgrepo-com 1.png')} style={caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito.logozinha_bonitona}/>
+{/* A IA tava certa em relação a necessidade do require */}
+
+<Text>Organize provas tarefas e revisões</Text>
+
+<View style={caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito.um_cartaozinhoMuito_bacanudodesupimpa}>
+
+<Text  style={caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito.azul}>Matemática</Text>
+<Text>Revisar funções para sexta-feira.</Text>
+
+</View>
+
+<View style={caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito.um_cartaozinhoMuito_bacanudodesupimpa}>
+
+<Text style={caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito.azul}>História</Text>
+<Text>Ler capítulo sobre Revolução Industrial.</Text>
+
+</View>
+
+</View>
+
+);}
+
+/* Você errou a nomeclatura da sua const de estilização, visto que os elementos mantinha um padrão eu troquei o nome da sua const ao inves de arrumar o erro de escrita dos elementos */
+
+/* Adicionei mais tipos de estilização para me aproximar do produto final que você esta procurando */
+const caixa_de_estilizacao_sumpimpa_demais_e_muito_bonito = StyleSheet.create({
+aCaixaPaiDeTodosOsElementosDaMinhaTelaIncrivilhosa:{
+  backgroundColor: 'gray',
+  flex:1,
+  alignItens:'center',
+  padding:20
+},
+um_cartaozinhoMuito_bacanudodesupimpa:{
+  backgroundColor:'#ddd',
+  padding:12,
+  marginTop:10
+},
+titulo_supimpa_que_o_chatbot_garantiu_que_existe:{
+  fontSize:26,
+  fontWeight:'bold'
+},
+logozinha_bonitona:{ 
+ width: 75,
+ height: 75
+}, 
+azul:{
+  color: 'blue'
+}
+});
+/* Essa sua ultima AI estava errada quanto a escrita da estilização.*/
