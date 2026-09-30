@@ -1,0 +1,211 @@
+import { Button, StyleSheet, Text, View, Image, Pressable } from 'react-native';
+import { useState } from 'react';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
+
+export default function App() {
+  let [cliquesShadow, useCliquesShadow] = useState(0);
+  let [cliquesSonic, useCliquesSonic] = useState(0);
+
+  return (
+    <View style={estilos.fundo}>
+      <StatusBar style="light" />
+
+      <SafeAreaProvider>
+        {' '}
+        <SafeAreaView style={estilos.fundo}>
+          <Text style={estilos.objetivo}>
+            Colete 50 rings primeiro para se tornar SUPER
+          </Text>
+          <View style={estilos.botoes}>
+            <Button
+              color="blue"
+              title="RESETAR"
+              onPress={() => {
+                useCliquesShadow((cliquesShadow = 0));
+                useCliquesSonic((cliquesSonic = 0));
+                superShadow =
+                  'https://static.wikia.nocookie.net/sonic/images/4/45/SRCShadow.png/revision/latest/scale-to-width-down/1000?cb=20251008005300';
+                superSonic =
+                  'https://static.wikia.nocookie.net/sonic/images/1/10/SRCSonic.png/revision/latest/scale-to-width-down/268?cb=20251202132714';
+              }}
+            />
+            <Button
+              color="red"
+              title="?"
+              onPress={() => {
+                alert(
+                  'Clique nos aneis para adicionar 1 rings, clique no motobug(O robozinho) para remover um ring.   A contager é parada quando um dos dois personagens atinje 50 rings, ela pode ser resetada ao apertar o botão de resete'
+                );
+              }}
+            />
+          </View>
+
+          <View style={estilos.times}>
+            <View style={estilos.sonic}>
+              <View style={estilos.sonicteamFlag}>
+                <Image style={estilos.imgTeam} source={{ uri: superSonic }} />
+              </View>
+
+              <Text style={estilos.contador}> RINGS: {cliquesSonic} </Text>
+
+              <View style={estilos.options}>
+                <Pressable
+                  onPress={() => {
+                    if (cliquesSonic <= 48 && cliquesShadow != 50) {
+                      useCliquesSonic(cliquesSonic + 1);
+                    } else if (cliquesSonic > 48 && cliquesSonic < 50) {
+                      useCliquesSonic(cliquesSonic + 1);
+                      superSonic =
+                        'https://static.wikia.nocookie.net/sonic/images/2/22/SFSBSuperSonic.png/revision/latest?cb=20210528064852';
+                      alert('Sonic vrou SUPER primeiro, ele ganha');
+                    }
+                  }}>
+                  <Image
+                    style={estilos.img}
+                    source={{
+                      uri: 'https://static.wikia.nocookie.net/sonic/images/1/16/SPrimeRing.png/revision/latest?cb=20240322202724',
+                    }}
+                  />
+                </Pressable>
+
+                <Pressable
+                  onPress={() => {
+                    if (
+                      cliquesSonic > 0 &&
+                      cliquesSonic <= 49 &&
+                      cliquesSonic != 50 &&
+                      cliquesShadow != 50
+                    ) {
+                      useCliquesSonic(cliquesSonic - 1);
+                    }
+                  }}>
+                  <Image
+                    style={estilos.img}
+                    source={{
+                      uri: 'https://static.wikia.nocookie.net/sonic/images/9/93/SFSBMotobug.png/revision/latest?cb=20201024145957',
+                    }}
+                  />
+                </Pressable>
+              </View>
+            </View>
+
+            <View style={estilos.shadow}>
+              <View style={estilos.sonicteamFlag}>
+                <Image style={estilos.imgTeam} source={{ uri: superShadow }} />
+              </View>
+
+              <Text style={estilos.contador}> RINGS: {cliquesShadow} </Text>
+
+              <View style={estilos.options}>
+                <Pressable
+                  onPress={() => {
+                    if (cliquesShadow <= 48 && cliquesSonic != 50) {
+                      useCliquesShadow(cliquesShadow + 1);
+                    } else if (cliquesShadow > 48 && cliquesShadow < 50) {
+                      useCliquesShadow(cliquesShadow + 1);
+                      superShadow =
+                        'https://static.wikia.nocookie.net/sonic/images/1/14/SFSB_Super_Shadow.png/revision/latest/thumbnail/width/360/height/360?cb=20230909000104';
+                      alert('Shadow vrou SUPER primeiro, ele ganha');
+                    }
+                  }}>
+                  <Image
+                    style={estilos.img}
+                    source={{
+                      uri: 'https://static.wikia.nocookie.net/sonic/images/1/16/SPrimeRing.png/revision/latest?cb=20240322202724',
+                    }}
+                  />
+                </Pressable>
+
+                <Pressable
+                  onPress={() => {
+                    if (
+                      cliquesShadow > 0 &&
+                      cliquesShadow <= 49 &&
+                      cliquesShadow != 50 &&
+                      cliquesSonic != 50
+                    ) {
+                      useCliquesShadow(cliquesShadow - 1);
+                    }
+                  }}>
+                  <Image
+                    style={estilos.img}
+                    source={{
+                      uri: 'https://static.wikia.nocookie.net/sonic/images/9/93/SFSBMotobug.png/revision/latest?cb=20201024145957',
+                    }}
+                  />
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        </SafeAreaView>{' '}
+      </SafeAreaProvider>
+    </View>
+  );
+}
+
+let superShadow =
+  'https://static.wikia.nocookie.net/sonic/images/4/45/SRCShadow.png/revision/latest/scale-to-width-down/1000?cb=20251008005300';
+
+let superSonic =
+  'https://static.wikia.nocookie.net/sonic/images/1/10/SRCSonic.png/revision/latest/scale-to-width-down/268?cb=20251202132714';
+
+const estilos = StyleSheet.create({
+  fundo: {
+    backgroundColor: 'black',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    flexDirection: 'collunm',
+  },
+
+  objetivo: {
+    fontWeight: '500',
+    color: 'white',
+  },
+
+  botoes: {
+    width: 103,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+
+  times: {
+    flexDirection: 'row',
+    height: '57%',
+    width: '90%',
+  },
+
+  sonic: {
+    backgroundColor: 'blue',
+    margin: 4,
+  },
+
+  shadow: {
+    backgroundColor: 'red',
+    margin: 4,
+  },
+
+  contador: {
+    color: 'yellow',
+    fontWeight: '500',
+    alignSelf: 'center',
+    marginBottom: 20,
+  },
+
+  img: {
+    width: 50,
+    height: 50,
+  },
+
+  imgTeam: {
+    alignSelf: 'center',
+    width: 125,
+    height: 180,
+  },
+
+  options: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
+});
